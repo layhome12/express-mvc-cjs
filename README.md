@@ -1,4 +1,4 @@
-# Express MVC ESM
+# Express MVC CJS
 
 Jalankan npm install terlebih dahulu untuk menjalankanya
 
