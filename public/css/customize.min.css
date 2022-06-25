@@ -1,0 +1,16 @@
+.container-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.logo-img {
+  margin-top: -15px;
+}
+.logo-img img {
+  width: 100px;
+}
+.lead {
+  font-size: 1.1rem !important;
+}
