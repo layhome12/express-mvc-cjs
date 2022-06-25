@@ -1,12 +1,12 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-const dotenv =require("dotenv");
-const cookieParser =require("cookie-parser");
+const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
 
-const config =require("./app/config/config.js");
-const routerWeb =require("./app/routes/web.js");
-const routerApi =require("./app/routes/api.js");
+const config = require("./app/config/config.js");
+const routerWeb = require("./app/routes/web.js");
+const routerApi = require("./app/routes/api.js");
 const corsOption = require("./app/config/cors.js");
 
 const app = express();
