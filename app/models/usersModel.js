@@ -1,8 +1,8 @@
 /*===================================================
  *                   Model Example
  *===================================================
- *  import { DataTypes } from "sequelize";
- *  import db from "../config/database.js";
+ *  const { DataTypes } = require("sequelize");
+ *  const db = require("../config/database.js");
  *
  * const userModel = db.define(
  *   'table_name',
@@ -18,7 +18,7 @@
  *
  * userModel.sync();
  *
- * export default userModel;
+ * module.exports = userModel;
  *==================================================
  */
 const { DataTypes } = require("sequelize");

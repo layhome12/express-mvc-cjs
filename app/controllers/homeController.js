@@ -5,7 +5,7 @@
  *  res.render("view");
  * };
  *
- * export default {
+ * module.exports = {
  *  index,
  * };
  *===================================================
