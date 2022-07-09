@@ -4,10 +4,10 @@ const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 
-const config = require("./app/config/config.js");
-const routerWeb = require("./app/routes/web.js");
-const routerApi = require("./app/routes/api.js");
-const corsOption = require("./app/config/cors.js");
+const config = require("./src/config/config.js");
+const routerWeb = require("./src/routes/web.js");
+const routerApi = require("./src/routes/api.js");
+const corsOption = require("./src/config/cors.js");
 
 const app = express();
 
@@ -19,7 +19,7 @@ const port = config.baseUrl().port;
 dotenv.config();
 
 //View Engine
-app.set("views", path.join("app", "views"));
+app.set("views", path.join("src", "views"));
 app.set("view engine", "hbs");
 
 //Body Parser
