@@ -1,31 +1,31 @@
 /*========================================================
-*               VUE GOOD TABLE SERVER SIDE
-*                 Created By : layhome12
-* ========================================================
-*/
+ *               VUE GOOD TABLE SERVER SIDE
+ *                 Created By : layhome12
+ * ========================================================
+ */
 
 /*========================================================
-*                      HOW TO USE IT
-*=========================================================
-* const dataTables = require("../libraries/dataTables.js");
-*
-* const dataTableFunc = async (req, res) => {
-*
-*  dataTables.configData({
-*    request: req,
-*    config: {
-*       attributes: ['foo', 'bar']
-*    },
-*    model: yourModel,
-*  });
-*
-*  let { resultData, totalRows } = await dataTables.getData();
-*
-*  console.log(resultData);
-*
-* };
-*=========================================================
-*/
+ *                      HOW TO USE IT
+ *=========================================================
+ * const dataTables = require("../libraries/dataTables.js");
+ *
+ * const dataTableFunc = async (req, res) => {
+ *
+ *  dataTables.configData({
+ *    request: req,
+ *    config: {
+ *       attributes: ['foo', 'bar']
+ *    },
+ *    model: yourModel,
+ *  });
+ *
+ *  let { resultData, totalRows } = await dataTables.getData();
+ *
+ *  console.log(resultData);
+ *
+ * };
+ *=========================================================
+ */
 
 const { Op } = require("sequelize");
 
@@ -33,7 +33,7 @@ let tableModel;
 let columnTable = [];
 let configModels = {};
 
-const configData = ({ request, config, model }) => {
+const configData = ({ request, config = {}, model }) => {
   tableModel = model;
   configModels = config;
   requestDataTable(request.body);
