@@ -16,6 +16,14 @@ const validationRun = (req, res, next) => {
   next();
 };
 
+const filterFetch = async (req, res, next) => {
+  await body("searchTerm").exists().run(req);
+  await body("sort").isArray().run(req);
+  await body("page").isNumeric().run(req);
+  await body("perPage").isNumeric().run(req);
+  validationRun(req, res, next);
+};
+
 const userForm = async (req, res, next) => {
   await body("username").isAlphanumeric().run(req);
   await body("password").notEmpty().run(req);
@@ -30,6 +38,7 @@ const loginForm = async (req, res, next) => {
 };
 
 module.exports = {
+  filterFetch,
   loginForm,
   userForm,
 };
