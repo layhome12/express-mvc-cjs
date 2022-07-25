@@ -1,11 +1,11 @@
-/*========================================================
+/*=========================================================
  *               VUE GOOD TABLE SERVER SIDE
  *                 Created By : layhome12
  * ========================================================
  */
 
-/*========================================================
- *                      HOW TO USE IT
+/*=========================================================
+ *                       PENGGUNAAN
  *=========================================================
  * const dataTables = require("../libraries/dataTables.js");
  *
@@ -24,6 +24,11 @@
  *  console.log(resultData);
  *
  * };
+ *
+ * KETERANGAN
+ * request => Berisi Request HTTP
+ * config => Berisi Sequelize Query Builder
+ * model => Berisi Model yang akan digunakan
  *=========================================================
  */
 
