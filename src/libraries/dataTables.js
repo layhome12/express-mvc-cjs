@@ -99,11 +99,7 @@ const requestDataTable = (requestData) => {
 };
 
 const countTotalRows = async () => {
-  let where = {};
-  if (configModels.hasOwnProperty("where"))
-    where = { where: configModels.where };
-
-  let totalRows = await tableModel.count(where);
+  let totalRows = await tableModel.count(configModels);
   return totalRows;
 };
 
