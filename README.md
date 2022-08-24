@@ -22,6 +22,7 @@ Jalankan perintah dibawah ini
 - Nodemailer
 - Express Validator
 - Crypto
+- Multer
 
 
     
