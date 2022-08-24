@@ -1,14 +1,30 @@
-# Express MVC CJS
+# Express JS MVC
 
-Jalankan npm install terlebih dahulu untuk menjalankanya
+Express JS dengan struktur MVC.
 
-Fitur
+## Instalasi
+Jalankan perintah dibawah ini
+```bash
+  npm install
+```
+
+## Run Server
+Jalankan perintah dibawah ini
+```bash
+  npm run serve
+```
+## Includes
+
 - Configurasi .env
-- Prettry print JSON
-- Sequelize Querry Builder
-- Validation Form
+- Vue Good Table Server Side
 - JSON Web Token
-- NodeMailer
+- Sequelize ORM
+- Nodemailer
+- Express Validator
 - Crypto
+
+
+    
+
 
 
