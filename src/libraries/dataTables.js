@@ -52,7 +52,7 @@ const searchingData = (searchTerm = "") => {
     columnTable.push(key);
 
     //Remove Search Specific Column
-    if (key != "created_at" && key != "updated_at") {
+    if (key != "id" && key != "created_at" && key != "updated_at") {
       arrColumn.push({
         [key]: {
           [Op.like]: `%${searchTerm}%`,
@@ -62,7 +62,7 @@ const searchingData = (searchTerm = "") => {
   }
 
   //Append Where Object
-  if (configModels.hasOwnProperty("where")) {
+  if (Object.prototype.hasOwnProperty.call(configModels, "where")) {
     var arrWhere = [];
 
     arrWhere.push(configModels.where);
@@ -95,7 +95,7 @@ const limitOffsetData = (page, length) => {
 const requestDataTable = (requestData) => {
   searchingData(requestData.searchTerm);
   sortingData(requestData.sort[0]);
-  limitOffsetData(requestData.page, requestData.perPage);
+  limitOffsetData(parseInt(requestData.page), parseInt(requestData.perPage));
 };
 
 const countTotalRows = async () => {
